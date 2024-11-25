@@ -36,6 +36,10 @@
             z-index: -1;
         }
 
+        button:hover {
+            background-color: #ff6347;
+        }
+        
         .navbar {
             font-family: 'Inter', sans-serif;
             padding: 20px;
@@ -100,11 +104,14 @@
         }
     </style>
 </head>
+    <div id="audio-start-screen" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); color: white; display: flex; justify-content: center; align-items: center; z-index: 9999;">
+        <button onclick="startAudio()" style="font-size: 20px; padding: 10px 20px; border: none; background-color: #f16868; color: white; border-radius: 5px; cursor: pointer;">
+            X
+        </button>
+    </div>
 
-<audio autoplay loop>
-    <source src="https://cdn.discordapp.com/attachments/1061809826692337734/1310638088015581235/Bruno_Mars_-_Marry_You_Official_Lyric_Video.mp3?ex=6745f256&is=6744a0d6&hm=777acdcb399a1d19a26741e890cbe887702223ea2c680fbe9a50bf490e58a1c2&" type="audio/mpeg">
-    Your browser does not support the audio tag.
-</audio>
+    <!-- Background music -->
+    <audio id="background-music" src="https://cdn.discordapp.com/attachments/1061809826692337734/1310638088015581235/Bruno_Mars_-_Marry_You_Official_Lyric_Video.mp3?ex=6745f256&is=6744a0d6&hm=777acdcb399a1d19a26741e890cbe887702223ea2c680fbe9a50bf490e58a1c2&" loop></audio>
 
 <body>
     <div class="navbar">
@@ -122,6 +129,11 @@
         by azell
     </footer>
     <script>
+        function startAudio() {
+            const audio = document.getElementById('background-music');
+            audio.play(); 
+            document.getElementById('audio-start-screen').style.display = 'none';
+        }
         const body = document.querySelector('body');
 
         document.addEventListener('mousemove', (e) => {
