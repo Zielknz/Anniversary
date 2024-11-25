@@ -1,0 +1,174 @@
+<html>
+<head>
+    <title>Love Letters</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@700&family=Kaisei+Harunoumi:wght@400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+            background-image: url('https://cdn.discordapp.com/attachments/1061809826692337734/1310626445558550558/2.jpg?ex=6745e77e&is=674495fe&hm=bcc1f15d638f6b446b6082f61f9fd30b96f7c97523bfa6b43c7ecec801994fa0&');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; 
+            min-height: 100vh;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.733);
+            z-index: -1;
+        }
+
+        .navbar {
+            font-family: 'Inter', sans-serif;
+            padding: 20px 10px;
+            color: #fff;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: left; 
+            padding: 40px 20px;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        .main-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            margin-bottom: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            text-align: left; 
+        }
+
+        .section h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .section p {
+            font-family: 'Kaisei Harunoumi', serif;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        footer {
+            font-size: 14px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar a {
+                font-size: 16px;
+            }
+
+            .main-content h1 {
+                font-size: 28px;
+            }
+
+            .section {
+                margin-bottom: 20px;
+                padding: 15px;
+            }
+
+            .section h2 {
+                font-size: 20px;
+            }
+
+            .section p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<audio autoplay loop>
+    <source src="https://cdn.discordapp.com/attachments/1061809826692337734/1310646470843568189/The_Weeknd_-_Call_Out_My_Name_Official_Audio.mp3?ex=6745fa25&is=6744a8a5&hm=91f644c2d6c5b1783e7e8e7f1f24377618ffa55a2f032574775ab8f953e91726&" type="audio/mpeg">
+    Your browser does not support the audio tag.
+</audio>
+
+<body>
+    <div class="navbar">
+        <a href="home.html">Home</a> |
+        <a href="our journey.html">Our Journey</a> |
+        <a href="love letter.html">Love Letter</a> |
+        <a href="soon.html">Future Plans</a>
+    </div>
+    <div class="main-content">
+        <h1>Love Letters</h1>
+
+        <div class="section">
+            <p>
+                Athena,<br><br>
+                From the moment we met, I knew you were someone special. Every day with you feels like a new chapter in a story I never want to end. You've brought so much joy into my life, and I can't imagine walking this journey without you by my side.<br><br>
+                You're not just my partner, you're my best friend, my support, and the one person who makes everything feel right. The memories we've created together are more than just moments — they're pieces of my heart that I'll carry with me forever.<br><br>
+                I'm thankful for your patience, your understanding, and the way you make even the toughest days better. Every day I'm learning more, not just about you, but about myself too — because of you.<br><br>
+                I'll always strive to be the best version of myself, not just for me, but for us. You deserve the world, and I want to be the one to give it to you, step by step.<br><br>
+                I love you more than words can say, and I can't wait to see where this journey takes us.<br><br>
+                With all my love,<br>
+                Azell
+            </p>
+        </div>
+    </div>
+    <footer>
+        by azell
+    </footer>
+    <script>
+        const body = document.querySelector('body');
+
+        document.addEventListener('mousemove', (e) => {
+            const xPos = (e.clientX / window.innerWidth) - 0.5; 
+            const yPos = (e.clientY / window.innerHeight) - 0.5; 
+
+            body.style.backgroundPosition = `${50 + xPos * 10}% ${50 + yPos * 10}%`;
+        });
+
+        document.addEventListener('touchmove', (e) => {
+            const touch = e.touches[0];
+            const xPos = (touch.clientX / window.innerWidth) - 0.5; 
+            const yPos = (touch.clientY / window.innerHeight) - 0.5; 
+
+            body.style.backgroundPosition = `${50 + xPos * 10}% ${50 + yPos * 10}%`;
+        });
+    </script>
+</body>
+</html>

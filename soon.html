@@ -1,0 +1,143 @@
+<html>
+<head>
+    <title>Happy Anniversary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@700&family=Kaisei+Harunoumi:wght@400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+            background-image: url('https://cdn.discordapp.com/attachments/1061809826692337734/1182841330741821440/babe.jpg?ex=67451655&is=6743c4d5&hm=29274cfcfa7321a8b6be175ecc6f72216fd5aeb74227fe3347acfb1c756c813f&'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        body::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+
+        .navbar {
+            font-family: 'Inter', sans-serif;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+            padding-top: 0px;
+        }
+
+        .main-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            margin: 0;
+        }
+
+        .main-content p {
+            font-family: 'Kaisei Harunoumi', serif;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        footer {
+            font-size: 14px;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+            padding: 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar a {
+                font-size: 30px; 
+                margin: 0 10px;
+            }
+
+            .main-content h1 {
+                font-size: 32px;
+            }
+
+            .main-content p {
+                font-size: 16px; 
+            }
+        }
+    </style>
+</head>
+
+<audio autoplay loop>
+    <source src="https://cdn.discordapp.com/attachments/1061809826692337734/1310638088015581235/Bruno_Mars_-_Marry_You_Official_Lyric_Video.mp3?ex=6745f256&is=6744a0d6&hm=777acdcb399a1d19a26741e890cbe887702223ea2c680fbe9a50bf490e58a1c2&" type="audio/mpeg">
+    Your browser does not support the audio tag.
+</audio>
+
+<body>
+    <div class="navbar">
+        <a href="home.html">Home</a> |
+        <a href="our journey.html">Our Journey</a> |
+        <a href="love letter.html">Love Letter</a> |
+        <a href="soon.html">Future Plans</a>
+    </div>
+    <div class="main-content">
+        <h1>Coming Soon</h1>
+        <p>"Stay tuned for our next adventure..."</p>
+    </div>
+    <footer>
+        by azell
+    </footer>
+    <script>
+        const body = document.querySelector('body');
+
+        document.addEventListener('mousemove', (e) => {
+            const xPos = (e.clientX / window.innerWidth) - 0.5; 
+            const yPos = (e.clientY / window.innerHeight) - 0.5; 
+
+            body.style.backgroundPosition = `${50 + xPos * 10}% ${50 + yPos * 10}%`;
+        });
+
+        document.addEventListener('touchmove', (e) => {
+            const touch = e.touches[0];
+            const xPos = (touch.clientX / window.innerWidth) - 0.5; 
+            const yPos = (touch.clientY / window.innerHeight) - 0.5; 
+
+            body.style.backgroundPosition = `${50 + xPos * 10}% ${50 + yPos * 10}%`;
+        });
+    </script>
+    
+</body>
+</html>
